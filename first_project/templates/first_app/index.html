@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Meggie Chen | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static "css/index.css" %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('body').scrollspy({
+                target: ".navbar",
+                offset: 50
+            });
+            $("#myNavbar a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">M C</a>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#project">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="home" class="container-fluid">
+        <div>
+            <h2>meet me.</h2>
+        </div>
+        <div>
+            <h1><span class="name">MEG</span>GIE CHEN</h1>
+        </div>
+        <div>
+            <h2 id="rightAbout">Software Developer.</h2>
+        </div>
+        <div><br><br>
+            <a href="{{../../../../static/files/resume.pdf" download><button type="button" class="btn btn-danger" id="btn1">Resume</button></a>
+        </div>
+    </div>
+    <div id="about" class="container-fluid">
+        <h1>ABOUT</h1>
+        <img src="{% static "images/profile.jpg"%}" alt="profile" class="profilePic">
+        <p>Hello! I'm <span>Meggie Chen</span> and I am a <span>Software Developer</span> who enjoys creating sleek,
+            clean,
+            and practicle web applications. I have applicable hands on experience in Python, MEAN, Java, JavaScript,
+            HTML/CSS,
+            Angular, and
+            Bootstrap through the development of dozens of projects. I am currently seeking opportunities where I can
+            be apart
+            of a team and company that will allow me to
+            purse my passion for web development. <br>
+            <span>Let's create something special!</span> </p>
+    </div>
+    <div id="skills" class="container-fluid">
+        <h1>SKILLS</h1>
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="ANGULAR">
+                    <img src="{% static "images/skillsGallery/angular.png"%}" class="skillsIcons"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="HTML">
+                    <img src="{% static "images/skillsGallery/html.png"%}" class="skillsIcons"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="CSS">
+                    <img src="{% static "images/skillsGallery/css.png"%}" class="skillsIcons"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="JAVASCRIPT">
+                    <img src="{% static "images/skillsGallery/js.png"%}" class="skillsIcons"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="BOOTSTRAP">
+                    <img src="{% static "images/skillsGallery/bootstrap.png"%}" class="skillsIcons"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="JAVA">
+                    <img src="{% static "images/skillsGallery/java.png"%}" class="skillsIcons"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="PYTHON">
+                    <img src="{% static "images/skillsGallery/python.png"%}" class="skillsIcons"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="DJANGO">
+                    <img src="{% static "images/skillsGallery/django.png"%}" class="skillsIcons"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                    <a href="#" data-toggle="tooltip" title="SPRING TOOL SUITE">
+                        <img src="{% static "images/skillsGallery/spring.webp"%}" class="skillsIcons"></a>
+                </div>
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="AMAZON WEB SERVICES">
+                    <img src="{% static "images/skillsGallery/aws.png"%}" class="skillsIcons"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="Mockflow">
+                    <img src="{% static "images/skillsGallery/mockflow.png"%}" class="skillsIcons"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="AJAX">
+                    <img src="{% static "images/skillsGallery/ajax.png"%}" class="skillsIcons"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="ECLIPSE">
+                    <img src="{% static "images/skillsGallery/eclipse.png"%}" class="skillsIcons"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="MONGODB">
+                    <img src="{% static "images/skillsGallery/mongodb.png"%}" class="skillsIcons"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="JQUERY">
+                    <img src="{% static "images/skillsGallery/jquery.png"%}" class="skillsIcons"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="MYSQL DATABASE">
+                    <img src="{% static "images/skillsGallery/mysql.jpeg"%}" class="skillsIcons"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="NODE.JS">
+                    <img src="{% static "images/skillsGallery/node.jpg"%}" class="skillsIcons"></a>
+            </div>
+            <div class="col-sm-3">
+                    <a href="#" data-toggle="tooltip" title="Balsalmiq">
+                        <img src="{% static "images/skillsGallery/balsalmiq.png"%}" class="skillsIcons"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="APPLE OS">
+                    <img src="{% static "images/skillsGallery/apple.jpg"%}" class="skillsIcons"></a>
+            </div>
+            <div class="col-sm-3">
+                <a href="#" data-toggle="tooltip" title="WINDOWS OS">
+                    <img src="{% static "images/skillsGallery/windows.png"%}" class="skillsIcons"></a>
+            </div>
+        </div>
+    </div>
+    <div id="project" class="container-fluid">
+        <h1>PROJECTS & WIREFRAMES</h1>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="{% static "images/gallery/project1.jpg"%}" alt="">
+                        <div class="overlay">
+                            <h2>Check Out My</h2>
+                            <a href="https://www.github.com/megych91" target="_blank"><button type="button" class="btn btn-default">GitHub</button></a>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="{% static "images/gallery/project2.png"%}" alt="">
+                    <div class="overlay">
+                        <h2>Check Out My</h2>
+                        <a href="https://www.github.com/megych91" target="_blank"><button type="button" class="btn btn-default">GitHub</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="{% static "images/gallery/project3.png"%}" alt="">
+                    <div class="overlay">
+                        <h2>Check Out My</h2>
+                        <a href="https://www.github.com/megych91" target="_blank"><button type="button" class="btn btn-default">GitHub</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="{% static "images/gallery/project4.png"%}" alt="">
+                    <div class="overlay">
+                        <h2>Check Out My</h2>
+                        <a href="https://www.github.com/megych91" target="_blank"><button type="button" class="btn btn-default">GitHub</button></a>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive" src="{% static "images/gallery/wireframe1.png"%}">
+                <div class="overlay">
+                    <h2>Check Out My</h2>
+                    <a href="https://www.github.com/megych91" target="_blank"><button type="button" class="btn btn-default">GitHub</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive" src="{% static "images/gallery/wireframe2.png"%}">
+                <div class="overlay">
+                    <h2>Check Out My</h2>
+                    <a href="https://www.github.com/megych91" target="_blank"><button type="button" class="btn btn-default">GitHub</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive" src="{% static "images/gallery/wireframe3.png"%}">
+                <div class="overlay">
+                    <h2>Check Out My</h2>
+                    <a href="https://www.github.com/megych91" target="_blank"><button type="button" class="btn btn-default">GitHub</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive" src="{% static "images/gallery/wireframe4.png"%}">
+                <div class="overlay">
+                    <h2>Check Out My</h2>
+                    <a href="https://www.github.com/megych91" target="_blank"><button type="button" class="btn btn-default">GitHub</button></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="contact" class="container-fluid">
+        <h1>CONTACT</h1>
+        <a href="tel:555-555-5555" data-toggle="tooltip" title="(240) 618-0156">
+            <img src="{% static "images/phone.png"%}" class="contactIcons"></a>
+        <a href="mailto:megych91@gmail.com" data-toggle="tooltip" title="megych91@gmail.com">
+            <img src="{% static "images/email.png"%}" class="contactIcons"></a>
+        <a href="https://www.linkedin.com/in/meggie-chen/" target="_blank" data-toggle="tooltip" title="LinkedIn">
+            <img src="{% static "images/linkedin.png"%}" class="contactIcons"></a>
+        <a href="https://www.github.com/megych91" target="_blank" data-toggle="tooltip" title="GitHub">
+            <img src="{% static "images/github.png"%}" class="contactIcons"></a>
+        <a href="https://www.facebook.com/mimeex3" target="_blank" data-toggle="tooltip" title="Facebook">
+            <img src="{% static "images/fb.png"%}" class="contactIcons"></a>
+        <a href="{{../../../../static/files/resume.pdf" target="_blank" data-toggle="tooltip" title="Resume">
+            <img src="{% static "images/resume.png"%}" class="contactIcons"></a>
+        <br><br>
+        <div id="center">
+            <div class="gmap_canvas"><iframe width="500" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=los%20angeles%20california&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+            <style>
+                .mapouter {
+                    text-align: right;
+                    height: 250px;
+                    width: 500px;
+                }
+
+                .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    height: 250px;
+                    width: 500px;
+                }
+            </style>
+        </div>
+    </div>
+    <div id="misc">
+        <a href="#home">Top Of Page</a>
+    </div>
+    <div id="footer">
+        © 2018 | <span>Meggie Chen</span> | All Rights Reserved
+    </div>
+
+</body>
+
+</html>

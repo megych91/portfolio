@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+* {
+  font-family: 'Muli', sans-serif;
+  /* color: black; */
+  /* outline: 1px solid blue; */
+}
+
+#home,
+#about,
+#project,
+#skills,
+#contact,
+#footer {
+  width: 100%;
+}
+
+#about,
+#project,
+#contact,
+#skills h1 {
+  font-size: 30px;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+
+#center, .gmap_canvas, iframe {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#home {
+  background-image: url(../images/rose.png);
+  height: 100vh;
+  padding-top: 20%;
+  padding-left: 10%;
+  padding-right: 28%;
+  /* text-align: center; */
+}
+
+.name {
+  color: rgb(237, 100, 148);
+}
+
+#home h1 {
+  font-size: 100px;
+  color: white;
+}
+
+/* #home #rightAbout {
+  text-align: right;
+} */
+
+#home h2 {
+  color: white;
+  font-size: 50px;
+  text-align: left;
+}
+
+#home span {
+  font-weight: bold;
+}
+
+#about {
+  background-color: rgb(238, 237, 237);
+  text-align: center;
+  color: rgb(45, 43, 43);
+  height: 880px;
+}
+
+#about p {
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+#about span {
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(255, 38, 139);
+}
+
+#footer span {
+  font-weight: bold;
+  color: white;
+}
+
+#footer {
+  text-align: center;
+  height: 60px;
+  padding-top: 20px;
+  font-size: 18px;
+  color: white;
+  background-color: rgb(70, 69, 69);
+}
+
+#skills {
+  height: 850px;
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+#skillz{
+  width: 100%;
+  margin-top: 100px;
+}
+
+.img-responsive{
+  height: 300px;
+}
+
+#project {
+  height: 690px;
+  background-color: crimson;
+  color: white;
+}
+
+#about h1{
+  margin-bottom: 70px;
+}
+
+#project h1{
+  margin-bottom: 70px;
+}
+
+#contact h1{
+  margin-bottom: 70px;
+}
+
+#skills h1{
+  margin-bottom: 70px;
+}
+
+#misc {
+  width: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 20px;
+  text-align: right;
+}
+#misc a{
+  color: rgb(255, 38, 139);
+  font-size: 20px;
+}
+
+#contact {
+  padding-left: 15%;
+  padding-right: 15%;
+  height: 700px;
+  text-align: center;
+}
+
+.skillsIcons {
+  height: 80px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.profilePic {
+  border-radius: 50%;
+  width: 320px;
+  height: 340px;
+}
+
+.progress {
+  height: 25px;
+  font-size: 18px;
+  /* outline: 1px solid gray; */
+  text-align: left;
+}
+
+#btn1 {
+  font-size: 18px;
+}
+
+.progress-bar {
+  background-color: rgb(53, 52, 52);
+  font-size: 18px;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 2px;
+}
+
+.bg-success {
+  background-color: rgb(255, 107, 163);
+  margin-right: 20px;
+}
+
+.contactIcons {
+  width: 70px;
+  margin-left: 50px;
+  margin-right: 50px;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+}
+.contactIcons:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  position: absolute;
+  overflow: hidden;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  border-bottom: 1px solid #FFF;
+  border-top: 1px solid #FFF;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+.hovereffect:hover .overlay {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.hovereffect:hover img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+  filter: brightness(0.6);
+  -webkit-filter: brightness(0.6);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  background-color: transparent;
+  color: #FFF;
+  text-decoration: none;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+.hovereffect a,
+.hovereffect p {
+  color: #FFF;
+  padding: 1em 0;
+  opacity: 0;
+  text-decoration: none;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+.hovereffect button {
+  margin-bottom: 10px;
+}
+
+.hovereffect:hover a,
+.hovereffect:hover p,
+.hovereffect:hover h2 {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.navbar-brand{
+  color: rgb(255, 81, 125);
+}
+
+
